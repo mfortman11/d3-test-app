@@ -1,0 +1,27 @@
+$background-color: #495A75;
+$header-gradient--1: #487ccf;
+$header-gradient--2: #a5b3c0;
+
+body {
+  background: $background-color;
+  padding:0;
+}
+
+header {
+  height: 50vh;
+  background: white;
+
+  div {
+    margin: auto;
+  }
+
+  .title {
+    width: 50vw;
+    margin: auto;
+  }
+}
+
+.about {
+  background: white;
+  border-radius: 8px;
+}
