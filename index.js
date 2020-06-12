@@ -2,18 +2,13 @@
 import './style.scss';
 import * as d3 from "d3";
 
-// Write Javascript code!
-const appDiv = document.getElementById('app');
-appDiv.innerHTML = `<h1>JS Starter</h1>`;
-
-
-let svg = d3.select("body").append("svg")
-    .attr("width", 600)
-    .attr("height", 600);
+let svg = d3.select(".developer-profile__stats").append("svg")
+    .attr("width", 450)
+    .attr("height", 375);
 
 let radialScale = d3.scaleLinear()
     .domain([0,10])
-    .range([0,250]);
+    .range([0,150]);
 
 let features = ["JavaScript","HTML","CSS","Angular","React","Node","UI/UX Design"];
 let attributeRank = [9,8,7,8,7,5,4];
@@ -32,8 +27,8 @@ let coordinates = getPathCoordinates(data);
 
 ticks.forEach(t =>
     svg.append("circle")
-    .attr("cx", 300)
-    .attr("cy", 300)
+    .attr("cx", 200)
+    .attr("cy", 200)
     .attr("fill", "none")
     .attr("stroke", "gray")
     .attr("r", radialScale(t))
@@ -41,8 +36,8 @@ ticks.forEach(t =>
 
 ticks.forEach(t =>
     svg.append("text")
-    .attr("x", 305)
-    .attr("y", 300 - radialScale(t))
+    .attr("x", 205)
+    .attr("y", 200 - radialScale(t))
 );
 
 for (var i = 0; i < features.length; i++) {
@@ -53,8 +48,8 @@ for (var i = 0; i < features.length; i++) {
 
     //draw axis line
     svg.append("line")
-    .attr("x1", 300)
-    .attr("y1", 300)
+    .attr("x1", 200)
+    .attr("y1", 200)
     .attr("x2", line_coordinate.x)
     .attr("y2", line_coordinate.y)
     .attr("stroke","black");
@@ -80,7 +75,7 @@ svg.append("path")
 function angleToCoordinate(angle, value){
     let x = Math.cos(angle) * radialScale(value);
     let y = Math.sin(angle) * radialScale(value);
-    return {"x": 300 + x, "y": 300 - y};
+    return {"x": 200 + x, "y": 200 - y};
 }
 
 function getPathCoordinates(data_point){

@@ -1,15 +1,16 @@
 $background-color: #495A75;
 $header-gradient--1: #487ccf;
-$header-gradient--2: #a5b3c0;
+$card-background: #a5b3c0;
 
 body {
-  background: $background-color;
-  padding:0;
+  background: white;
+  margin:0;
+
 }
 
 header {
   height: 50vh;
-  background: white;
+  background: $background-color;
 
   div {
     margin: auto;
@@ -17,11 +18,41 @@ header {
 
   .title {
     width: 50vw;
+    text-align: center;
     margin: auto;
   }
 }
 
-.about {
+.developer-profile__container {
+  margin: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background: $card-background;
+}
+
+.developer-profile__info-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.developer-profile__attributes {
+  padding:8px;
+}
+
+.developer-profile__stats {
   background: white;
-  border-radius: 8px;
+  border: 2px solid black;
+  border-radius: 12px;
+  width:200;
+  height: 200;
+}
+
+.developer-profile__university {
+  display: flex;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
 }
