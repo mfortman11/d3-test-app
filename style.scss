@@ -37,14 +37,14 @@ header {
 
 .developer-profile__attributes {
   padding:8px;
+  min-width: 300px;
 }
 
 .developer-profile__stats {
   background: white;
   border: 2px solid black;
   border-radius: 12px;
-  width:200;
-  height: 200;
+  min-width: 400px;
 }
 
 .developer-profile__university {
@@ -54,5 +54,14 @@ header {
     display: flex;
     flex-direction: column;
     margin-left: 16px;
+  }
+}
+
+.developer-profile__basic-info {
+  display: flex;
+  justify-content: space-between;
+
+  :first-child {
+    font-weight: bold;
   }
 }
