@@ -1,30 +1,57 @@
-$background-color: #495A75;
-$header-gradient--1: #487ccf;
-$card-background: #a5b3c0;
+$header-footer-color: #242424;
+$background-color: #f4f4f4;
+$card-background: #8f8f8f;
+
+$max-card-width: 950px;
 
 body {
   background: white;
-  margin:0;
-
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: $background-color;
 }
 
 header {
-  height: 50vh;
-  background: $background-color;
+  height: 40vh;
+  background: linear-gradient(90deg,#4592cc, #43adb5, #4592cc);
+  padding-bottom: 16px;
 
-  div {
-    margin: auto;
+  .header-content {
+    height: 100%;
+    background-color: $header-footer-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    border-top-right-radius: 20vh;
+    border-bottom-left-radius: 20vh;
   }
 
-  .title {
-    width: 50vw;
+  .header-title {
+    color: white;
     text-align: center;
+    vertical-align: middle;
     margin: auto;
+  }
+}
+
+footer {
+  height: 10vh;
+  background: linear-gradient(90deg,#4592cc, #43adb5, #4592cc);
+  padding-top: 8px;
+
+  .footer-content {
+    height: 100%;
+    background: $header-footer-color;
+
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
   }
 }
 
 .developer-profile__container {
-  margin: 16px;
+  max-width: $max-card-width;
+  margin: 16px auto;
   padding: 16px;
   border-radius: 12px;
   background: $card-background;

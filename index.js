@@ -65,11 +65,11 @@ for (var i = 0; i < features.length; i++) {
 svg.append("path")
 .datum(coordinates)
 .attr("d",line)
-.attr("stroke-width", 3)
+.attr("stroke-width", 5)
 .attr("stroke", "blue")
 .attr("fill", "blue")
 .attr("stroke-opacity", 1)
-.attr("opacity", 0.5);
+.attr("opacity", 0.6);
 
 
 function angleToCoordinate(angle, value){
