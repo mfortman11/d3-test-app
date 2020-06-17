@@ -2,7 +2,7 @@ $header-footer-color: #242424;
 $background-color: #f4f4f4;
 $card-background: #8f8f8f;
 
-$max-card-width: 950px;
+$max-card-width: 1200px;
 
 body {
   background: white;
@@ -44,27 +44,31 @@ footer {
     height: 100%;
     background: $header-footer-color;
 
-    border-top-left-radius: 5vh;
-    border-bottom-right-radius: 5vh;
+    // border-top-left-radius: 5vh;
+    // border-bottom-right-radius: 5vh;
   }
 }
 
 .developer-profile__container {
   max-width: $max-card-width;
   margin: 16px auto;
-  padding: 16px;
+  padding: 16px 32px;
   border-radius: 12px;
   background: $card-background;
 }
 
 .developer-profile__info-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 .developer-profile__attributes {
   padding:8px;
   min-width: 300px;
+
+  p {
+    margin: 0;
+  }
 }
 
 .developer-profile__stats {
