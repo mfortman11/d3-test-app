@@ -3,16 +3,19 @@ $background-color: #f4f4f4;
 $card-background: #8f8f8f;
 
 $max-card-width: 1200px;
+$header-height: 30vh;
+$footer-height: 10vh;
+
 
 body {
-  background: white;
+  background: $header-footer-color;
   margin: 0;
   font-family: "Courier New", Courier, monospace;
   color: $background-color;
 }
 
 header {
-  height: 40vh;
+  height: $header-height;
   background: linear-gradient(90deg,#4592cc, #43adb5, #4592cc);
   padding-bottom: 16px;
 
@@ -23,8 +26,8 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    border-top-right-radius: 20vh;
-    border-bottom-left-radius: 20vh;
+    border-top-right-radius: calc(#{$header-height} / 2);
+    border-bottom-left-radius: calc(#{$header-height} / 2);
   }
 
   .header-title {
@@ -35,24 +38,20 @@ header {
   }
 }
 
-footer {
-  height: 10vh;
-  background: linear-gradient(90deg,#4592cc, #43adb5, #4592cc);
-  padding-top: 8px;
+// footer {
+//   height: $footer-height;
+//   background: linear-gradient(90deg,#4592cc, #43adb5, #4592cc);
+//   padding-top: 8px;
 
-  .footer-content {
-    height: 100%;
-    background: $header-footer-color;
-
-    // border-top-left-radius: 5vh;
-    // border-bottom-right-radius: 5vh;
-  }
-}
-
+//   .footer-content {
+//     height: 100%;
+//     background: $header-footer-color;
+//   }
+// }
 .developer-profile__container {
   max-width: $max-card-width;
   margin: 16px auto;
-  padding: 16px 32px;
+  padding: 32px;
   border-radius: 12px;
   background: $card-background;
 }
@@ -95,6 +94,10 @@ footer {
   :first-child {
     font-weight: bold;
   }
+}
+
+.follow-me {
+  display: flex;
 }
 
 .about-me {
