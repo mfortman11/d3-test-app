@@ -96,8 +96,13 @@ header {
   }
 }
 
-.follow-me {
+footer {
   display: flex;
+  justify-content: center;
+  
+  a {
+    margin: 8px
+  } 
 }
 
 .about-me {
