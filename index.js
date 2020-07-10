@@ -3,15 +3,15 @@ import './style.scss';
 import * as d3 from "d3";
 
 let svg = d3.select(".developer-profile__stats").append("svg")
-    .attr("width", 450)
+    .attr("width", 425)
     .attr("height", 375);
 
 let radialScale = d3.scaleLinear()
     .domain([0,10])
     .range([0,150]);
 
-let features = ["JavaScript","HTML","CSS","Angular","React","Node","UI/UX Design"];
-let attributeRank = [9,8,7,8,7,5,4];
+let features = ["HTML","CSS","React","Angular","UI/UX Design","Node","JavaScript"];
+let attributeRank = [9,8,7,8,3,6,8];
 let ticks = [0,2,4,6,8,10];
 
 let line = d3.line()
@@ -44,7 +44,7 @@ for (var i = 0; i < features.length; i++) {
     let ft_name = features[i];
     let angle = (Math.PI / 2) + (2 * Math.PI * i / features.length);
     let line_coordinate = angleToCoordinate(angle, 10);
-    let label_coordinate = angleToCoordinate(angle, 10.5);
+    let label_coordinate = angleToCoordinate(angle, 12);
 
     //draw axis line
     svg.append("line")
@@ -56,7 +56,7 @@ for (var i = 0; i < features.length; i++) {
 
     //draw axis label
     svg.append("text")
-    .attr("x", label_coordinate.x)
+    .attr("x", label_coordinate.x - 20)
     .attr("y", label_coordinate.y)
     .text(ft_name);
 }
